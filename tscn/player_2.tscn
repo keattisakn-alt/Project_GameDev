@@ -241,8 +241,9 @@ height = 80
 fill = 1
 fill_from = Vector2(0.474886, 0.543379)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1xx30"]
-radius = 3.2596
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xx30"]
+radius = 4.0
+height = 10.0
 
 [node name="Player2" type="CharacterBody2D"]
 scale = Vector2(4, 4)
@@ -268,7 +269,7 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_1xx30")
 offset = Vector2(0, 1)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(-0.5, 7)
-shape = SubResource("CircleShape2D_1xx30")
+position = Vector2(-0.5, 5.25)
+shape = SubResource("CapsuleShape2D_1xx30")

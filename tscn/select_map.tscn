@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://oo0cof21463"]
+[gd_scene load_steps=13 format=3 uid="uid://oo0cof21463"]
 
 [ext_resource type="Script" uid="uid://be6h2er4yidch" path="res://Script/select_map.gd" id="1_18fi8"]
 [ext_resource type="Texture2D" uid="uid://c5ka8ugx6gw3u" path="res://Asset/Screenshot 2025-09-03 042734.png" id="2_w1ovw"]
+[ext_resource type="FontFile" uid="uid://c1uyl0pcschsw" path="res://Minecraft.ttf" id="3_2rn3w"]
+[ext_resource type="AudioStream" uid="uid://c7jfsiqctpoth" path="res://Sound/ssvid.net--A-Lonely-Cherry-Tree.mp3" id="3_vxru2"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jgo4c"]
 
@@ -73,27 +75,27 @@ script = ExtResource("1_18fi8")
 material = SubResource("CanvasItemMaterial_jgo4c")
 use_parent_material = true
 layout_mode = 0
-offset_right = 789.0
-offset_bottom = 393.0
+offset_right = 795.0
+offset_bottom = 384.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_vxru2")
 
 [node name="PanelContainer2" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_top = 408.0
-offset_right = 788.0
+offset_top = 403.0
+offset_right = 793.0
 offset_bottom = 801.0
 
 [node name="PanelContainer3" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 819.0
+offset_left = 815.0
 offset_top = 1.0
 offset_right = 1603.0
-offset_bottom = 394.0
+offset_bottom = 383.0
 
 [node name="PanelContainer4" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 817.0
-offset_top = 408.0
+offset_left = 814.0
+offset_top = 403.0
 offset_right = 1601.0
 offset_bottom = 801.0
 
@@ -108,7 +110,8 @@ offset_bottom = 215.0
 grow_horizontal = 2
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_2rn3w")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/focus = SubResource("StyleBoxFlat_w1ovw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vxru2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_2rn3w")
@@ -121,47 +124,50 @@ offset_top = 157.0
 offset_right = 1304.0
 offset_bottom = 220.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_2rn3w")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_eidv0")
 text = "Map2"
 
 [node name="Button3" type="Button" parent="."]
 layout_mode = 0
 offset_left = 289.0
-offset_top = 566.0
+offset_top = 558.0
 offset_right = 480.0
-offset_bottom = 629.0
+offset_bottom = 621.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_2rn3w")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_yy050")
 text = "Map3"
 
 [node name="Button4" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1117.0
-offset_top = 565.0
+offset_top = 558.0
 offset_right = 1314.0
-offset_bottom = 628.0
+offset_bottom = 621.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_2rn3w")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_q30hc")
 text = "Map4"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 262.0
-offset_top = 684.0
+offset_top = 672.0
 offset_right = 517.0
-offset_bottom = 712.0
+offset_bottom = 700.0
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1095.0
-offset_top = 671.0
+offset_top = 661.0
 offset_right = 1350.0
-offset_bottom = 699.0
+offset_bottom = 689.0
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
 
@@ -173,5 +179,12 @@ offset_right = 1341.0
 offset_bottom = 298.0
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vxru2")
+volume_db = 5.0
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

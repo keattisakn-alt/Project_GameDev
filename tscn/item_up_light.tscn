@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhq5slrm1ewe3"]
+[gd_scene load_steps=5 format=3 uid="uid://bhq5slrm1ewe3"]
 
 [ext_resource type="Texture2D" uid="uid://buvm707kfjn8l" path="res://Asset/ะ“ั€ัะฟะฟะฐ 50.png" id="1_4e84b"]
 [ext_resource type="Script" uid="uid://gqwrpldwd6nm" path="res://Script/item_up_light.gd" id="1_h853l"]
+[ext_resource type="AudioStream" uid="uid://ddj6cl8oovhi0" path="res://Sound/ขยายมุมมอง.mp3" id="3_jacbw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h853l"]
 size = Vector2(34, 34)
@@ -15,5 +16,8 @@ texture = ExtResource("1_4e84b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_h853l")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jacbw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

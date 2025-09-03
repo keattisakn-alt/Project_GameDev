@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bhews5l1307gf"]
+[gd_scene load_steps=15 format=3 uid="uid://bhews5l1307gf"]
 
 [ext_resource type="Script" uid="uid://cp5k7g8ap0gwl" path="res://Script/landmine.gd" id="1_qnclp"]
 [ext_resource type="Texture2D" uid="uid://b7ltgiuc7c7bk" path="res://Asset/miscellaneous-items-game-sprites_7814-442-removebg-preview.png" id="1_ynndf"]
@@ -9,9 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://bu6w57sfruiri" path="res://Asset/Screenshot_2025-09-01_222216-removebg-preview 4.png" id="6_p8aq8"]
 [ext_resource type="Texture2D" uid="uid://dopu3endcn3xt" path="res://Asset/Screenshot_2025-09-01_222216-removebg-preview 5.png" id="7_odo8o"]
 [ext_resource type="Texture2D" uid="uid://c7o2cc4vofq05" path="res://Asset/tilemap.png" id="9_nywvs"]
+[ext_resource type="AudioStream" uid="uid://2io7c2buqqch" path="res://Sound/กับระเบิด.mp3" id="10_3glc2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_51vap"]
-radius = 23.0217
+radius = 26.0192
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2ato1"]
 animations = [{
@@ -39,6 +40,17 @@ animations = [{
 "speed": 11.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_yvnfb"]
+offsets = PackedFloat32Array(0.309677, 0.741935)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3glc2"]
+gradient = SubResource("Gradient_yvnfb")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.511416, 0.506849)
+
 [node name="landmine" type="Area2D"]
 script = ExtResource("1_qnclp")
 
@@ -61,5 +73,14 @@ frame_progress = 1.0
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("9_nywvs")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_3glc2")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(15, 15)
+energy = 0.0
+texture = SubResource("GradientTexture2D_3glc2")
+offset = Vector2(0, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

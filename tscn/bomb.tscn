@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ca4fyrwpa08t3"]
+[gd_scene load_steps=23 format=3 uid="uid://ca4fyrwpa08t3"]
 
 [ext_resource type="Script" uid="uid://bxxrk6jxot3hw" path="res://Script/bomb.gd" id="1_a16xk"]
 [ext_resource type="Texture2D" uid="uid://0tpamtat830k" path="res://Asset/Screenshot_2025-08-31_234813-removebg-preview-copy2.png" id="1_loaxf"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://budp8u86hjtfb" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview2.png" id="12_a16xk"]
 [ext_resource type="Texture2D" uid="uid://2ty3aa63alb0" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview3.png" id="13_yvnfb"]
 [ext_resource type="Texture2D" uid="uid://d3j8pcbo3tfow" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview4.png" id="14_30314"]
+[ext_resource type="Texture2D" uid="uid://compble7udqf6" path="res://Asset/Screenshot 2025-09-02 225545-Photoroom.png" id="16_yvnfb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eovry"]
 animations = [{
@@ -88,6 +89,17 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_yvnfb"]
+offsets = PackedFloat32Array(0.309677, 0.741935)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_30314"]
+gradient = SubResource("Gradient_yvnfb")
+width = 500
+height = 500
+fill = 1
+fill_from = Vector2(0.511416, 0.506849)
+
 [node name="Bomb" type="Area2D"]
 script = ExtResource("1_a16xk")
 
@@ -99,6 +111,7 @@ frame = 2
 frame_progress = 0.834205
 
 [node name="CollisionShape2DFire" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 2)
 shape = SubResource("CircleShape2D_qd5jr")
 
 [node name="bomb" type="AnimatedSprite2D" parent="."]
@@ -115,5 +128,16 @@ frame_progress = 0.0204643
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 volume_db = 5.0
+
+[node name="shadow" type="Sprite2D" parent="."]
+position = Vector2(1, 37)
+scale = Vector2(0.564145, 0.395349)
+texture = ExtResource("16_yvnfb")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(15, 15)
+energy = 0.0
+texture = SubResource("GradientTexture2D_30314")
+offset = Vector2(0, 1)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

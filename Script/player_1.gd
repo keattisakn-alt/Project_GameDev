@@ -14,9 +14,8 @@ signal tricker
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	action = true  
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("Move_up") && Input.is_action_pressed("Move_right") && action:
 		direction.y -= 0.7
@@ -53,7 +52,8 @@ func _process(delta: float) -> void:
 		position.y = clamp(position.y,0,screen_size.y)
 		
 	if direction != Vector2.ZERO:
-		position += delta*Speed*direction
+		direction = direction.normalized()
+		velocity = direction * Speed
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()
@@ -79,10 +79,11 @@ func create_bomb():
 		Bomb.get_node("fire2").queue_free()
 		Bomb.get_node("CollisionShape2DFire").disabled = true
 		Bomb.get_node("bomb").play("bomb")
-		
-		var timer = get_tree().create_timer(1.5)
+		Bomb.get_node("shadow").show()
+		var timer = get_tree().create_timer(1.0)
 		await timer.timeout
 		$Sound.play()  
+		Bomb.get_node("shadow").hide()
 		Bomb.get_node("bomb").queue_free()
 		Bomb.get_node("fire").set_scale(Vector2(scale_fire,scale_fire))
 		Bomb.get_node("fire").show()

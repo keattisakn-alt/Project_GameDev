@@ -12,37 +12,37 @@ signal tricker
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	action = true
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
-	if Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_right") && action:
 		direction.y -= 0.7
 		direction.x += 0.7
 		$AnimatedSprite2D.play("Walk_up_right")
-	elif Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_up") && Input.is_action_pressed("ui_left") && action:
 		direction.y -= 0.7
 		direction.x -= 0.7
 		$AnimatedSprite2D.play("Walk_up_left")
-	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_right") && action:
 		direction.y += 0.7
 		direction.x += 0.7
 		$AnimatedSprite2D.play("Walk_down_right")
-	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_down") && Input.is_action_pressed("ui_left")&& action: 
 		direction.y += 0.7
 		direction.x -= 0.7
 		$AnimatedSprite2D.play("Walk_down_left")
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") && action:
 		$AnimatedSprite2D.play("Walk_right")
 		direction.x += 1
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left") && action:
 		$AnimatedSprite2D.play("Walk_left")
 		direction.x -= 1
-	elif Input.is_action_pressed("ui_up"):
+	elif Input.is_action_pressed("ui_up") && action:
 		$AnimatedSprite2D.play("Walk_up")
 		direction.y -= 1
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") && action:
 		$AnimatedSprite2D.play("Walk_down")
 		direction.y += 1
 	else:
@@ -51,19 +51,20 @@ func _process(delta: float) -> void:
 	position.x = clamp(position.x,0,screen_size.x)
 	position.y = clamp(position.y,0,screen_size.y)	
 	if direction != Vector2.ZERO:
-		position += delta*Speed*direction
+		direction = direction.normalized()
+		velocity = direction * Speed
 	else:
 		velocity = Vector2.ZERO
 	move_and_slide()
 
 	
-	if Input.is_action_just_pressed("Drop_bomb_p2"):
+	if Input.is_action_just_pressed("Drop_bomb_p2") && action:
 		if number_bombs >= 1:
 			number_bombs -= 1
 			emit_signal("tricker",self)
 			create_bomb()
 		
-	if Input.is_action_just_pressed("Drop_landmine_p2"):
+	if Input.is_action_just_pressed("Drop_landmine_p2") && action:
 		if number_bombs >= 2:
 			number_bombs -= 2
 			emit_signal("tricker",self)
@@ -78,10 +79,11 @@ func create_bomb():
 		bomb.get_node("fire2").hide()
 		bomb.get_node("CollisionShape2DFire").disabled = true
 		bomb.get_node("bomb").play("bomb")
-		
-		var timer = get_tree().create_timer(1.5)
+		bomb.get_node("shadow").show()
+		var timer = get_tree().create_timer(1.0)
 		await timer.timeout
 		$Sound.play()
+		bomb.get_node("shadow").hide()
 		bomb.get_node("bomb").queue_free()
 		bomb.get_node("fire2").set_scale(Vector2(scale_fire,scale_fire))
 		bomb.get_node("fire2").show()

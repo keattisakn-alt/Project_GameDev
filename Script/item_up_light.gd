@@ -7,7 +7,7 @@ func _on_body_entered(body: Node2D) -> void:
 		body.get_node("PointLight2D").texture_scale = body.texture_scale 
 		$Sprite2D.hide()
 		$CollisionShape2D.disabled = true
-		#$Sound.play()
+		$Sound.play()
 		print(1)
 		var timer = get_tree().create_timer(1.0)
 		await timer.timeout

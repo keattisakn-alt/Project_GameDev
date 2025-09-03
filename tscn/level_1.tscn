@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://dir8e1b1yx3vr"]
+[gd_scene load_steps=29 format=4 uid="uid://dir8e1b1yx3vr"]
 
 [ext_resource type="Script" uid="uid://cr2uju7ynxg5u" path="res://Script/level_1.gd" id="1_ou3g8"]
 [ext_resource type="PackedScene" uid="uid://dnj4sopmb1lg" path="res://tscn/player_1.tscn" id="1_pnq3n"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://b287lytsung3v" path="res://tscn/item_up_scale.tscn" id="7_u4ld8"]
 [ext_resource type="Texture2D" uid="uid://bhyaa1375k57i" path="res://Asset/tilemap_grayscale.png" id="8_ylxr0"]
 [ext_resource type="PackedScene" uid="uid://bhq5slrm1ewe3" path="res://tscn/item_up_light.tscn" id="10_h2n6l"]
+[ext_resource type="FontFile" uid="uid://c1uyl0pcschsw" path="res://Minecraft.ttf" id="10_pj4il"]
+[ext_resource type="AudioStream" uid="uid://bu4kukjh7ne5e" path="res://Sound/ssvid.net---The-search.mp3" id="11_s4g3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2n6l"]
 texture = ExtResource("2_xy5ct")
@@ -1094,19 +1096,43 @@ scale = Vector2(2, 2)
 position = Vector2(165, 403)
 scale = Vector2(2, 2)
 
+[node name="item_up_light" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(354, 307)
+
+[node name="item_up_light2" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(495, 211)
+
+[node name="item_up_light3" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(495, 731)
+
+[node name="item_up_light4" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(731, 730)
+
+[node name="item_up_light5" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(920, 259)
+
+[node name="item_up_light6" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(1343, 259)
+
+[node name="item_up_light7" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(1204, 70)
+
+[node name="item_up_light8" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(683, 354)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.00184107, 0.00184107, 0.00184107, 1)
 
 [node name="Player1" parent="." instance=ExtResource("1_pnq3n")]
 position = Vector2(87, 86)
 
 [node name="Label_P1" type="Label" parent="Player1"]
-offset_left = -5.25
-offset_top = -16.5
-offset_right = 3.75
-offset_bottom = -5.5
-theme_override_colors/font_color = Color(0, 0.541176, 0.701961, 1)
+offset_left = -5.0
+offset_top = -16.75
+offset_right = 4.0
+offset_bottom = -5.75
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_pj4il")
 theme_override_font_sizes/font_size = 7
 text = "10"
 
@@ -1118,7 +1144,8 @@ offset_left = -5.0
 offset_top = -18.5
 offset_right = 4.0
 offset_bottom = -5.5
-theme_override_colors/font_color = Color(0.87451, 0.486275, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_pj4il")
 theme_override_font_sizes/font_size = 7
 text = "10"
 
@@ -1156,7 +1183,8 @@ offset_bottom = 350.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("10_pj4il")
+theme_override_font_sizes/font_size = 90
 text = "win"
 horizontal_alignment = 1
 
@@ -1167,7 +1195,8 @@ offset_top = 454.0
 offset_right = 1080.0
 offset_bottom = 517.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("10_pj4il")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/hover = SubResource("StyleBoxFlat_s4g3m")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xy5ct")
 text = "Play"
@@ -1179,34 +1208,16 @@ offset_top = 451.0
 offset_right = 752.0
 offset_bottom = 514.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("10_pj4il")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/hover = SubResource("StyleBoxFlat_pj4il")
 theme_override_styles/normal = SubResource("StyleBoxFlat_h2n6l")
 text = "Exit"
 
-[node name="item_up_light" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(354, 307)
-
-[node name="item_up_light2" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(495, 211)
-
-[node name="item_up_light3" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(495, 731)
-
-[node name="item_up_light4" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(731, 730)
-
-[node name="item_up_light5" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(920, 259)
-
-[node name="item_up_light6" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(1343, 259)
-
-[node name="item_up_light7" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(1204, 70)
-
-[node name="item_up_light8" parent="." instance=ExtResource("10_h2n6l")]
-position = Vector2(683, 354)
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_s4g3m")
+volume_db = 5.0
+autoplay = true
 
 [connection signal="pickup_bombs" from="item_up_bombs" to="." method="_on_item_up_bombs"]
 [connection signal="pickup_bombs" from="item_up_bombs2" to="." method="_on_item_up_bombs"]

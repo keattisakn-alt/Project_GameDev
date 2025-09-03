@@ -230,8 +230,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vy4ds"]
-radius = 3.2596
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vy4ds"]
+radius = 4.0
+height = 10.0
 
 [sub_resource type="Gradient" id="Gradient_vy4ds"]
 offsets = PackedFloat32Array(0.406452, 0.664516)
@@ -256,8 +257,8 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(-0.5, 7)
-shape = SubResource("CircleShape2D_vy4ds")
+position = Vector2(-0.5, 5.25)
+shape = SubResource("CapsuleShape2D_vy4ds")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 12.75)

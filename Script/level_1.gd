@@ -3,15 +3,9 @@ extends Node2D
 
 func _ready() -> void:
 	pass
-	#$Panel.hide()
-	#$Summary.hide()
-	#$Button.hide()
-	#$Button2.hide()
 
 func _process(delta: float) -> void:
 	pass
-	
-	
 	
 func update_bomb_label(Player):
 	if Player.name == "Player1":
@@ -61,6 +55,8 @@ func set_P2_win():
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player1":
+		body.action = false
 		set_P2_win()
 	elif body.name == "Player2":
+		body.action = false
 		set_P1_win()
