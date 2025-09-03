@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bpfwy5yotdxwd"]
+
+[ext_resource type="Script" uid="uid://c8p8km33k3c2w" path="res://Script/item_up_speed.gd" id="1_3bilp"]
+[ext_resource type="Texture2D" uid="uid://c2it1srkx55cf" path="res://Asset/ะ“ั€ัะฟะฟะฐ 38.png" id="2_3bilp"]
+[ext_resource type="AudioStream" uid="uid://bwvgmet8ee3d4" path="res://Sound/อีพความเร็ว.mp3" id="3_8j82e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nfu2"]
+size = Vector2(34, 34)
+
+[node name="item_up_speed" type="Area2D"]
+script = ExtResource("1_3bilp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_3bilp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4nfu2")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8j82e")
+volume_db = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

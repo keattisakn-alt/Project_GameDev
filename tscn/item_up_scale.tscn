@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b287lytsung3v"]
+
+[ext_resource type="Texture2D" uid="uid://cm3cw81d78ypv" path="res://Asset/ะ“ั€ัะฟะฟะฐ 10.png" id="1_4yf14"]
+[ext_resource type="Script" uid="uid://gcvjmifwyueu" path="res://Script/item_up_scale.gd" id="1_b177d"]
+[ext_resource type="AudioStream" uid="uid://baq8efrxdgeh" path="res://Sound/อัพบอม.mp3" id="3_4d0h7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b177d"]
+size = Vector2(35, 34)
+
+[node name="item_up_scale" type="Area2D"]
+script = ExtResource("1_b177d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_4yf14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_b177d")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4d0h7")
+volume_db = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,1225 @@
+[gd_scene load_steps=27 format=4 uid="uid://dir8e1b1yx3vr"]
+
+[ext_resource type="Script" uid="uid://cr2uju7ynxg5u" path="res://Script/level_1.gd" id="1_ou3g8"]
+[ext_resource type="PackedScene" uid="uid://dnj4sopmb1lg" path="res://tscn/player_1.tscn" id="1_pnq3n"]
+[ext_resource type="PackedScene" uid="uid://dhuolqknyo16w" path="res://tscn/player_2.tscn" id="2_ibj5y"]
+[ext_resource type="Texture2D" uid="uid://pbvr1lj3220f" path="res://Asset/tilemap_color_packed.png" id="2_xy5ct"]
+[ext_resource type="PackedScene" uid="uid://4b5toaav8qr6" path="res://tscn/block.tscn" id="4_3kf8w"]
+[ext_resource type="PackedScene" uid="uid://bl5igmmilc26p" path="res://tscn/item_up_bombs.tscn" id="5_w33rq"]
+[ext_resource type="PackedScene" uid="uid://bpfwy5yotdxwd" path="res://tscn/item_up_speed.tscn" id="6_pyd7c"]
+[ext_resource type="PackedScene" uid="uid://b287lytsung3v" path="res://tscn/item_up_scale.tscn" id="7_u4ld8"]
+[ext_resource type="Texture2D" uid="uid://bhyaa1375k57i" path="res://Asset/tilemap_grayscale.png" id="8_ylxr0"]
+[ext_resource type="PackedScene" uid="uid://bhq5slrm1ewe3" path="res://tscn/item_up_light.tscn" id="10_h2n6l"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2n6l"]
+texture = ExtResource("2_xy5ct")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_s4g3m"]
+sources/0 = SubResource("TileSetAtlasSource_h2n6l")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ylxr0"]
+texture = ExtResource("8_ylxr0")
+texture_region_size = Vector2i(17, 17)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xy5ct"]
+sources/0 = SubResource("TileSetAtlasSource_ylxr0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy5ct"]
+size = Vector2(15.7627, 271.017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2n6l"]
+size = Vector2(542.712, 14.2373)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4g3m"]
+size = Vector2(15.4238, 269.661)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj4il"]
+size = Vector2(542.881, 15.5933)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r13wc"]
+size = Vector2(16.1017, 16.1017)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhpqi"]
+size = Vector2(1603, 800)
+
+[sub_resource type="Gradient" id="Gradient_xy5ct"]
+offsets = PackedFloat32Array(0.083871, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h2n6l"]
+gradient = SubResource("Gradient_xy5ct")
+fill = 1
+fill_from = Vector2(0.497717, 0.506849)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4g3m"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xy5ct"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj4il"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2n6l"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 0.35)
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_ou3g8")
+
+[node name="Layer1" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(0, -1)
+scale = Vector2(2.95, 2.95)
+tile_map_data = PackedByteArray("AAABAAEAAAAFAAMAAAACAAEAAAAFAAMAAAADAAEAAAAFAAMAAAAEAAEAAAAFAAMAAAAFAAEAAAAFAAMAAAAGAAEAAAAFAAMAAAAHAAEAAAAFAAMAAAAIAAEAAAAFAAMAAAAJAAEAAAAFAAMAAAAKAAEAAAAFAAMAAAALAAEAAAAFAAMAAAAMAAEAAAAFAAMAAAANAAEAAAAFAAMAAAAOAAEAAAAFAAMAAAAPAAEAAAAFAAMAAAAQAAEAAAAFAAMAAAARAAEAAAAFAAMAAAASAAEAAAAFAAMAAAATAAEAAAAFAAMAAAAUAAEAAAAFAAMAAAAVAAEAAAAFAAMAAAAWAAEAAAAFAAMAAAAXAAEAAAAFAAMAAAAYAAEAAAAFAAMAAAAZAAEAAAAFAAMAAAAaAAEAAAAFAAMAAAAbAAEAAAAFAAMAAAAcAAEAAAAFAAMAAAAdAAEAAAAFAAMAAAAeAAEAAAAFAAMAAAAfAAEAAAAFAAMAAAAgAAEAAAAFAAMAAAAgAAwAAAAFAAMAAAAgAA0AAAAFAAMAAAAgAA4AAAAFAAMAAAAgAA8AAAAFAAMAAAAfAA8AAAAFAAMAAAAeAA8AAAAFAAMAAAAdAA8AAAAFAAMAAAAcAA8AAAAFAAMAAAAbAA8AAAAFAAMAAAAaAA8AAAAFAAMAAAAZAA8AAAAFAAMAAAAYAA8AAAAFAAMAAAAXAA8AAAAFAAMAAAAWAA8AAAAFAAMAAAAVAA8AAAAFAAMAAAAUAA8AAAAFAAMAAAATAA8AAAAFAAMAAAASAA8AAAAFAAMAAAAEAA8AAAAFAAMAAAADAA8AAAAFAAMAAAACAA8AAAAFAAMAAAABAA8AAAAFAAMAAAABAA4AAAAFAAMAAAABAA0AAAAFAAMAAAABAAwAAAAFAAMAAAABAAsAAAAFAAMAAAABAAoAAAAFAAMAAAABAAkAAAAFAAMAAAABAAgAAAAFAAMAAAABAAcAAAAFAAMAAAACAAcAAAAFAAMAAAACAAYAAAAFAAMAAAACAAUAAAAFAAMAAAACAAQAAAAFAAMAAAACAAMAAAAFAAMAAAACAAIAAAAFAAMAAAABAAIAAAAFAAMAAAABAAMAAAAFAAMAAAABAAQAAAAFAAMAAAABAAUAAAAFAAMAAAABAAYAAAAFAAMAAAACAAkAAAAFAAMAAAACAAoAAAAFAAMAAAACAAsAAAAFAAMAAAACAAwAAAAFAAMAAAACAA0AAAAFAAMAAAADAA0AAAAFAAMAAAADAA4AAAAFAAMAAAACAA4AAAAFAAMAAAAFAA8AAAAFAAMAAAAGAA8AAAAFAAMAAAAHAA8AAAAFAAMAAAAIAA8AAAAFAAMAAAAJAA8AAAAFAAMAAAAKAA8AAAAFAAMAAAALAA8AAAAFAAMAAAAMAA8AAAAFAAMAAAANAA8AAAAFAAMAAAAOAA8AAAAFAAMAAAAPAA8AAAAFAAMAAAAQAA8AAAAFAAMAAAARAA8AAAAFAAMAAAAfAA4AAAAFAAMAAAAfAA0AAAAFAAMAAAAfAAwAAAAFAAMAAAAfAAsAAAAFAAMAAAAgAAsAAAAFAAMAAAAgAAoAAAAFAAMAAAAgAAkAAAAFAAMAAAAgAAgAAAAFAAMAAAAgAAcAAAAFAAMAAAAgAAYAAAAFAAMAAAAgAAUAAAAFAAMAAAAgAAQAAAAFAAMAAAAgAAMAAAAFAAMAAAAgAAIAAAAFAAMAAAAfAAIAAAAFAAMAAAAeAAIAAAAFAAMAAAAdAAIAAAAFAAMAAAAcAAIAAAAFAAMAAAAbAAIAAAAFAAMAAAAaAAIAAAAFAAMAAAAZAAIAAAAFAAMAAAASAAIAAAAFAAMAAAARAAIAAAAFAAMAAAAQAAIAAAAFAAMAAAAPAAIAAAAFAAMAAAAOAAIAAAAFAAMAAAANAAIAAAAFAAMAAAAMAAIAAAAFAAMAAAALAAIAAAAFAAMAAAAKAAIAAAAFAAMAAAAJAAIAAAAFAAMAAAAIAAIAAAAFAAMAAAAHAAIAAAAFAAMAAAAGAAIAAAAFAAMAAAAFAAIAAAAFAAMAAAAEAAIAAAAFAAMAAAADAAIAAAAFAAMAAAATAAIAAAAFAAMAAAAUAAIAAAAFAAMAAAAVAAIAAAAFAAMAAAAWAAIAAAAFAAMAAAAXAAIAAAAFAAMAAAAYAAIAAAAFAAMAAAAXAAMAAAAFAAMAAAAWAAMAAAAFAAMAAAAVAAMAAAAFAAMAAAAUAAMAAAAFAAMAAAATAAMAAAAFAAMAAAASAAMAAAAFAAMAAAARAAMAAAAFAAMAAAAQAAMAAAAFAAMAAAAPAAMAAAAFAAMAAAAOAAMAAAAFAAMAAAANAAMAAAAFAAMAAAAMAAMAAAAFAAMAAAALAAMAAAAFAAMAAAAKAAMAAAAFAAMAAAAJAAMAAAAFAAMAAAAIAAMAAAAFAAMAAAAHAAMAAAAFAAMAAAAGAAMAAAAFAAMAAAAFAAMAAAAFAAMAAAAEAAMAAAAFAAMAAAADAAMAAAAFAAMAAAAYAAMAAAAFAAMAAAAZAAMAAAAFAAMAAAAaAAMAAAAFAAMAAAAbAAMAAAAFAAMAAAAcAAMAAAAFAAMAAAAdAAMAAAAFAAMAAAAeAAMAAAAFAAMAAAAfAAMAAAAFAAMAAAAfAAQAAAAFAAMAAAAfAAUAAAAFAAMAAAAfAAYAAAAFAAMAAAAfAAcAAAAFAAMAAAAfAAgAAAAFAAMAAAAfAAkAAAAFAAMAAAAfAAoAAAAFAAMAAAAeAA0AAAAFAAMAAAAeAA4AAAAFAAMAAAAdAA4AAAAFAAMAAAAcAA4AAAAFAAMAAAAbAA4AAAAFAAMAAAAaAA4AAAAFAAMAAAAZAA4AAAAFAAMAAAAYAA4AAAAFAAMAAAAXAA4AAAAFAAMAAAAWAA4AAAAFAAMAAAAVAA4AAAAFAAMAAAAUAA4AAAAFAAMAAAATAA4AAAAFAAMAAAASAA4AAAAFAAMAAAARAA4AAAAFAAMAAAAQAA4AAAAFAAMAAAAPAA4AAAAFAAMAAAAOAA4AAAAFAAMAAAANAA4AAAAFAAMAAAAMAA4AAAAFAAMAAAALAA4AAAAFAAMAAAAKAA4AAAAFAAMAAAAJAA4AAAAFAAMAAAAIAA4AAAAFAAMAAAAHAA4AAAAFAAMAAAAGAA4AAAAFAAMAAAAFAA4AAAAFAAMAAAAEAA4AAAAFAAMAAAADAAwAAAAFAAMAAAADAAsAAAAFAAMAAAADAAoAAAAFAAMAAAADAAkAAAAFAAMAAAADAAgAAAAFAAMAAAADAAcAAAAFAAMAAAADAAYAAAAFAAMAAAADAAUAAAAFAAMAAAADAAQAAAAFAAMAAAACAAgAAAAFAAMAAAAEAAYAAAAFAAMAAAAEAAUAAAAFAAMAAAAEAAQAAAAFAAMAAAAFAAQAAAAFAAMAAAAGAAQAAAAFAAMAAAAHAAQAAAAFAAMAAAAIAAQAAAAFAAMAAAAJAAQAAAAFAAMAAAAKAAQAAAAFAAMAAAALAAQAAAAFAAMAAAAMAAQAAAAFAAMAAAANAAQAAAAFAAMAAAAOAAQAAAAFAAMAAAAPAAQAAAAFAAMAAAAQAAQAAAAFAAMAAAARAAQAAAAFAAMAAAASAAQAAAAFAAMAAAATAAQAAAAFAAMAAAAUAAQAAAAFAAMAAAAVAAQAAAAFAAMAAAAWAAQAAAAFAAMAAAAXAAQAAAAFAAMAAAAYAAQAAAAFAAMAAAAZAAQAAAAFAAMAAAAaAAQAAAAFAAMAAAAbAAQAAAAFAAMAAAAcAAQAAAAFAAMAAAAdAAQAAAAFAAMAAAAcAAUAAAAFAAMAAAAbAAUAAAAFAAMAAAAaAAUAAAAFAAMAAAAZAAYAAAAFAAMAAAAYAAYAAAAFAAMAAAAXAAYAAAAFAAMAAAAWAAYAAAAFAAMAAAAVAAYAAAAFAAMAAAAUAAcAAAAFAAMAAAATAAcAAAAFAAMAAAASAAcAAAAFAAMAAAARAAgAAAAFAAMAAAAQAAgAAAAFAAMAAAAPAAgAAAAFAAMAAAARAAcAAAAFAAMAAAATAAYAAAAFAAMAAAAUAAYAAAAFAAMAAAAVAAUAAAAFAAMAAAASAAYAAAAFAAMAAAAQAAcAAAAFAAMAAAAPAAcAAAAFAAMAAAAOAAcAAAAFAAMAAAANAAgAAAAFAAMAAAAMAAgAAAAFAAMAAAALAAgAAAAFAAMAAAAKAAgAAAAFAAMAAAARAAYAAAAFAAMAAAATAAUAAAAFAAMAAAAUAAUAAAAFAAMAAAAKAAkAAAAFAAMAAAANAAcAAAAFAAMAAAAPAAYAAAAFAAMAAAAQAAUAAAAFAAMAAAARAAUAAAAFAAMAAAAPAAUAAAAFAAMAAAAOAAUAAAAFAAMAAAANAAYAAAAFAAMAAAAMAAYAAAAFAAMAAAALAAYAAAAFAAMAAAAKAAcAAAAFAAMAAAAJAAcAAAAFAAMAAAAIAAcAAAAFAAMAAAAKAAYAAAAFAAMAAAAMAAUAAAAFAAMAAAANAAUAAAAFAAMAAAALAAUAAAAFAAMAAAAJAAYAAAAFAAMAAAAIAAYAAAAFAAMAAAAHAAcAAAAFAAMAAAAGAAcAAAAFAAMAAAAFAAcAAAAFAAMAAAAKAAUAAAAFAAMAAAAJAAUAAAAFAAMAAAAHAAYAAAAFAAMAAAAGAAYAAAAFAAMAAAAFAAYAAAAFAAMAAAAHAAUAAAAFAAMAAAAIAAUAAAAFAAMAAAAGAAUAAAAFAAMAAAAEAAcAAAAFAAMAAAAEAAgAAAAFAAMAAAAFAAgAAAAFAAMAAAAGAAgAAAAFAAMAAAAFAAkAAAAFAAMAAAAEAAkAAAAFAAMAAAAHAAgAAAAFAAMAAAAIAAgAAAAFAAMAAAAJAAgAAAAFAAMAAAAGAAkAAAAFAAMAAAAEAAoAAAAFAAMAAAAFAAoAAAAFAAMAAAAHAAkAAAAFAAMAAAAJAAkAAAAFAAMAAAAIAAkAAAAFAAMAAAAHAAoAAAAFAAMAAAAGAAoAAAAFAAMAAAAFAAsAAAAFAAMAAAAEAAsAAAAFAAMAAAAGAAsAAAAFAAMAAAAIAAoAAAAFAAMAAAAJAAoAAAAFAAMAAAAHAAsAAAAFAAMAAAAEAAwAAAAFAAMAAAAFAAwAAAAFAAMAAAAIAAsAAAAFAAMAAAAGAAwAAAAFAAMAAAAEAA0AAAAFAAMAAAAHAAwAAAAFAAMAAAAGAA0AAAAFAAMAAAAHAA0AAAAFAAMAAAAIAAwAAAAFAAMAAAAJAAwAAAAFAAMAAAAKAAwAAAAFAAMAAAALAAwAAAAFAAMAAAALAAsAAAAFAAMAAAAKAA0AAAAFAAMAAAAJAA0AAAAFAAMAAAAIAA0AAAAFAAMAAAALAA0AAAAFAAMAAAAMAA0AAAAFAAMAAAANAA0AAAAFAAMAAAAOAA0AAAAFAAMAAAAPAA0AAAAFAAMAAAAQAA0AAAAFAAMAAAARAA0AAAAFAAMAAAASAA0AAAAFAAMAAAARAAwAAAAFAAMAAAASAAwAAAAFAAMAAAATAAwAAAAFAAMAAAAUAAwAAAAFAAMAAAAVAAwAAAAFAAMAAAAWAAwAAAAFAAMAAAAXAAwAAAAFAAMAAAAYAAwAAAAFAAMAAAATAA0AAAAFAAMAAAAUAA0AAAAFAAMAAAAVAA0AAAAFAAMAAAAWAA0AAAAFAAMAAAAXAA0AAAAFAAMAAAAYAA0AAAAFAAMAAAAZAA0AAAAFAAMAAAAaAA0AAAAFAAMAAAAbAA0AAAAFAAMAAAAcAA0AAAAFAAMAAAAdAA0AAAAFAAMAAAAPAAwAAAAFAAMAAAAQAAwAAAAFAAMAAAAFAA0AAAAFAAMAAAAMAAwAAAAFAAMAAAANAAwAAAAFAAMAAAAOAAsAAAAFAAMAAAAPAAsAAAAFAAMAAAAQAAsAAAAFAAMAAAARAAsAAAAFAAMAAAASAAsAAAAFAAMAAAANAAsAAAAFAAMAAAAMAAsAAAAFAAMAAAAKAAsAAAAFAAMAAAAJAAsAAAAFAAMAAAAMAAoAAAAFAAMAAAANAAoAAAAFAAMAAAAOAAoAAAAFAAMAAAAPAAoAAAAFAAMAAAAQAAoAAAAFAAMAAAALAAoAAAAFAAMAAAAKAAoAAAAFAAMAAAANAAkAAAAFAAMAAAAOAAkAAAAFAAMAAAAPAAkAAAAFAAMAAAASAAgAAAAFAAMAAAAOAAgAAAAFAAMAAAAMAAkAAAAFAAMAAAALAAkAAAAFAAMAAAALAAcAAAAFAAMAAAAMAAcAAAAFAAMAAAAQAAYAAAAFAAMAAAAOAAYAAAAFAAMAAAAFAAUAAAAFAAMAAAASAAUAAAAFAAMAAAASAAkAAAAFAAMAAAASAAoAAAAFAAMAAAARAAoAAAAFAAMAAAARAAkAAAAFAAMAAAAQAAkAAAAFAAMAAAAOAAwAAAAFAAMAAAATAAsAAAAFAAMAAAAUAAsAAAAFAAMAAAAVAAsAAAAFAAMAAAAWAAsAAAAFAAMAAAAXAAsAAAAFAAMAAAAYAAsAAAAFAAMAAAAZAAsAAAAFAAMAAAAaAAsAAAAFAAMAAAAbAAsAAAAFAAMAAAAcAAsAAAAFAAMAAAAZAAwAAAAFAAMAAAAaAAwAAAAFAAMAAAAbAAwAAAAFAAMAAAAcAAwAAAAFAAMAAAAdAAwAAAAFAAMAAAAeAAwAAAAFAAMAAAAeAAsAAAAFAAMAAAAdAAsAAAAFAAMAAAAeAAoAAAAFAAMAAAAdAAoAAAAFAAMAAAAeAAkAAAAFAAMAAAAeAAgAAAAFAAMAAAAeAAcAAAAFAAMAAAAdAAkAAAAFAAMAAAAdAAgAAAAFAAMAAAAeAAYAAAAFAAMAAAAeAAUAAAAFAAMAAAAeAAQAAAAFAAMAAAAdAAUAAAAFAAMAAAAdAAYAAAAFAAMAAAAdAAcAAAAFAAMAAAAcAAcAAAAFAAMAAAAcAAgAAAAFAAMAAAAcAAkAAAAFAAMAAAAcAAoAAAAFAAMAAAAcAAYAAAAFAAMAAAAbAAoAAAAFAAMAAAAbAAkAAAAFAAMAAAAbAAgAAAAFAAMAAAAbAAcAAAAFAAMAAAAbAAYAAAAFAAMAAAAaAAcAAAAFAAMAAAAaAAgAAAAFAAMAAAAaAAkAAAAFAAMAAAAaAAoAAAAFAAMAAAAaAAYAAAAFAAMAAAAZAAoAAAAFAAMAAAAZAAkAAAAFAAMAAAAZAAgAAAAFAAMAAAAZAAcAAAAFAAMAAAAZAAUAAAAFAAMAAAAYAAkAAAAFAAMAAAAYAAoAAAAFAAMAAAAYAAgAAAAFAAMAAAAYAAcAAAAFAAMAAAAYAAUAAAAFAAMAAAAXAAkAAAAFAAMAAAAXAAoAAAAFAAMAAAAXAAgAAAAFAAMAAAAXAAcAAAAFAAMAAAAXAAUAAAAFAAMAAAAWAAgAAAAFAAMAAAAWAAkAAAAFAAMAAAAWAAoAAAAFAAMAAAAVAAoAAAAFAAMAAAAVAAkAAAAFAAMAAAAWAAcAAAAFAAMAAAAWAAUAAAAFAAMAAAAVAAgAAAAFAAMAAAAUAAoAAAAFAAMAAAAUAAkAAAAFAAMAAAAVAAcAAAAFAAMAAAAUAAgAAAAFAAMAAAATAAkAAAAFAAMAAAATAAoAAAAFAAMAAAATAAgAAAAFAAMAAAA=")
+tile_set = SubResource("TileSet_s4g3m")
+
+[node name="item_up_bombs" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(117, 729)
+
+[node name="item_up_bombs2" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(307, 210)
+
+[node name="item_up_bombs3" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(825, 352)
+
+[node name="item_up_bombs10" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(447, 446)
+
+[node name="item_up_bombs6" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(873, 683)
+
+[node name="item_up_bombs7" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(1062, 257)
+
+[node name="item_up_bombs9" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(1156, 541)
+
+[node name="item_up_bombs8" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(636, 115)
+
+[node name="item_up_bombs4" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(1297, 730)
+
+[node name="item_up_bombs5" parent="." instance=ExtResource("5_w33rq")]
+position = Vector2(1343, 116)
+
+[node name="item_up_speed" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(589, 447)
+
+[node name="item_up_speed2" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(70, 541)
+
+[node name="item_up_speed3" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(448, 306)
+
+[node name="item_up_speed4" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(967, 71)
+
+[node name="item_up_speed7" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(1062, 636)
+
+[node name="item_up_speed6" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(1391, 730)
+
+[node name="item_up_speed5" parent="." instance=ExtResource("6_pyd7c")]
+position = Vector2(1440, 115)
+
+[node name="item_up_scale" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(731, 589)
+
+[node name="item_up_scale2" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(307, 730)
+
+[node name="item_up_scale3" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(826, 730)
+
+[node name="item_up_scale4" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(1063, 351)
+
+[node name="item_up_scale6" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(1486, 307)
+
+[node name="item_up_scale5" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(730, 258)
+
+[node name="item_up_scale7" parent="." instance=ExtResource("7_u4ld8")]
+position = Vector2(448, 400)
+
+[node name="Layer0" type="TileMapLayer" parent="."]
+use_parent_material = true
+position = Vector2(0, -1)
+scale = Vector2(2.95, 2.95)
+tile_map_data = PackedByteArray("AAAAAAAAAAAGAAIAAAABAAAAAAAGAAIAAAACAAAAAAAGAAIAAAADAAAAAAAGAAIAAAAEAAAAAAAGAAIAAAAFAAAAAAAGAAIAAAAGAAAAAAAGAAIAAAAHAAAAAAAGAAIAAAAIAAAAAAAGAAIAAAAJAAAAAAAGAAIAAAAKAAAAAAAGAAIAAAALAAAAAAAGAAIAAAAMAAAAAAAGAAIAAAANAAAAAAAGAAIAAAAOAAAAAAAGAAIAAAAPAAAAAAAGAAIAAAAQAAAAAAAGAAIAAAARAAAAAAAGAAIAAAASAAAAAAAGAAIAAAATAAAAAAAGAAIAAAAUAAAAAAAGAAIAAAAVAAAAAAAGAAIAAAAWAAAAAAAGAAIAAAAXAAAAAAAGAAIAAAAYAAAAAAAGAAIAAAAZAAAAAAAGAAIAAAAaAAAAAAAGAAIAAAAbAAAAAAAGAAIAAAAcAAAAAAAGAAIAAAAdAAAAAAAGAAIAAAAeAAAAAAAGAAIAAAAfAAAAAAAGAAIAAAAgAAAAAAAGAAIAAAAhAAAAAAAGAAIAAAAhAAEAAAAGAAIAAAAhAAIAAAAGAAIAAAAhAAMAAAAGAAIAAAAhAAQAAAAGAAIAAAAhAAUAAAAGAAIAAAAhAAYAAAAGAAIAAAAhAAcAAAAGAAIAAAAhAAgAAAAGAAIAAAAhAAkAAAAGAAIAAAAhAAoAAAAGAAIAAAAhAAsAAAAGAAIAAAAhAAwAAAAGAAIAAAAhAA0AAAAGAAIAAAAhAA4AAAAGAAIAAAAhAA8AAAAGAAIAAAAhABAAAAAGAAIAAAAgABAAAAAGAAIAAAAfABAAAAAGAAIAAAAeABAAAAAGAAIAAAAdABAAAAAGAAIAAAAcABAAAAAGAAIAAAAbABAAAAAGAAIAAAAaABAAAAAGAAIAAAAZABAAAAAGAAIAAAAYABAAAAAGAAIAAAAXABAAAAAGAAIAAAAWABAAAAAGAAIAAAAVABAAAAAGAAIAAAAUABAAAAAGAAIAAAATABAAAAAGAAIAAAASABAAAAAGAAIAAAARABAAAAAGAAIAAAAQABAAAAAGAAIAAAAPABAAAAAGAAIAAAAOABAAAAAGAAIAAAANABAAAAAGAAIAAAAMABAAAAAGAAIAAAALABAAAAAGAAIAAAAKABAAAAAGAAIAAAAJABAAAAAGAAIAAAAAAAEAAAAGAAIAAAAAAAIAAAAGAAIAAAAAAAMAAAAGAAIAAAAAAAQAAAAGAAIAAAAAAAUAAAAGAAIAAAAAAAYAAAAGAAIAAAAAAAcAAAAGAAIAAAAAAAgAAAAGAAIAAAAAAAkAAAAGAAIAAAAAAAoAAAAGAAIAAAAAAAsAAAAGAAIAAAAAAAwAAAAGAAIAAAAAAA0AAAAGAAIAAAAAAA4AAAAGAAIAAAAAAA8AAAAGAAIAAAAAABAAAAAGAAIAAAABABAAAAAGAAIAAAACABAAAAAGAAIAAAADABAAAAAGAAIAAAAEABAAAAAGAAIAAAAFABAAAAAGAAIAAAAGABAAAAAGAAIAAAAHABAAAAAGAAIAAAAIABAAAAAGAAIAAAADAAMAAAAGAAIAAAADAAYAAAAGAAIAAAADAAcAAAAGAAIAAAADAA8AAAAGAAIAAAADAA4AAAAGAAIAAAAIAAYAAAAGAAIAAAAIAAcAAAAGAAIAAAAIAAgAAAAGAAIAAAAPAAYAAAAGAAIAAAAQAAYAAAAGAAIAAAARAAYAAAAGAAIAAAASAAYAAAAGAAIAAAATAAYAAAAGAAIAAAAPAAkAAAAGAAIAAAASAAkAAAAGAAIAAAAKAA4AAAAGAAIAAAAXAAwAAAAGAAIAAAAaAAgAAAAGAAIAAAAYAAQAAAAGAAIAAAAcAAQAAAAGAAIAAAAdAAgAAAAGAAIAAAAcAAwAAAAGAAIAAAAZAA4AAAAGAAIAAAASAA0AAAAGAAIAAAAWAAgAAAAGAAIAAAAXAAgAAAAGAAIAAAAVAAMAAAAGAAIAAAARAAMAAAAGAAIAAAAOAAIAAAAGAAIAAAANAAYAAAAGAAIAAAAHAAwAAAAGAAIAAAAFAAoAAAAGAAIAAAAKAAsAAAAGAAIAAAALAAsAAAAGAAIAAAAGAAMAAAAGAAIAAAAHAAMAAAAGAAIAAAAeAA8AAAAGAAIAAAAeAA4AAAAGAAIAAAAZAAYAAAAGAAIAAAALAAUAAAAGAAIAAAADAA0AAAAGAAIAAAAFAA4AAAAGAAIAAAAEAA0AAAAGAAIAAAAHAA4AAAAGAAIAAAAIAA8AAAAGAAIAAAABAAoAAAAGAAIAAAACAAoAAAAGAAIAAAACAAsAAAAGAAIAAAABAAcAAAAGAAIAAAADAAQAAAAGAAIAAAACAAQAAAAGAAIAAAAFAAMAAAAGAAIAAAAIAAMAAAAGAAIAAAAIAAIAAAAGAAIAAAAGAAUAAAAGAAIAAAAHAAUAAAAGAAIAAAAEAAYAAAAGAAIAAAAGAAcAAAAGAAIAAAAFAAgAAAAGAAIAAAAHAAkAAAAGAAIAAAAFAAsAAAAGAAIAAAAHAAsAAAAGAAIAAAAJAAsAAAAGAAIAAAAKAAwAAAAGAAIAAAAJAAUAAAAGAAIAAAAKAAcAAAAGAAIAAAAOAAoAAAAGAAIAAAAOAAkAAAAGAAIAAAAQAAkAAAAGAAIAAAAQAAgAAAAGAAIAAAARAAkAAAAGAAIAAAATAAkAAAAGAAIAAAATAAgAAAAGAAIAAAAVAAcAAAAGAAIAAAAVAAkAAAAGAAIAAAAXAAYAAAAGAAIAAAAYAAUAAAAGAAIAAAAZAAUAAAAGAAIAAAAMAAEAAAAGAAIAAAANAAMAAAAGAAIAAAASAAMAAAAGAAIAAAAYAAEAAAAGAAIAAAAWAAMAAAAGAAIAAAAbAAEAAAAGAAIAAAAbAAMAAAAGAAIAAAAbAAQAAAAGAAIAAAAdAAMAAAAGAAIAAAAZAAgAAAAGAAIAAAAaAAcAAAAGAAIAAAAeAAgAAAAGAAIAAAAdAAkAAAAGAAIAAAAfAAwAAAAGAAIAAAAeAAsAAAAGAAIAAAAcAAsAAAAGAAIAAAAbAAsAAAAGAAIAAAAcAA0AAAAGAAIAAAAcAA4AAAAGAAIAAAAbAA4AAAAGAAIAAAAaAA4AAAAGAAIAAAAZAA0AAAAGAAIAAAAXAA0AAAAGAAIAAAAWAAwAAAAGAAIAAAAVAAwAAAAGAAIAAAAVAAsAAAAGAAIAAAAVAA0AAAAGAAIAAAATAA0AAAAGAAIAAAAUAA4AAAAGAAIAAAARAA0AAAAGAAIAAAAQAA0AAAAGAAIAAAAPAA0AAAAGAAIAAAAQAA8AAAAGAAIAAAANAA0AAAAGAAIAAAANAA8AAAAGAAIAAAANAA4AAAAGAAIAAAALAA4AAAAGAAIAAAAeAAUAAAAGAAIAAAAfAAEAAAAGAAIAAAA=")
+tile_set = SubResource("TileSet_xy5ct")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Layer0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(7.71187, 134.661)
+shape = SubResource("RectangleShape2D_xy5ct")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(271.017, 6.77966)
+shape = SubResource("RectangleShape2D_h2n6l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(535.339, 135.339)
+shape = SubResource("RectangleShape2D_s4g3m")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(271.271, 263.39)
+shape = SubResource("RectangleShape2D_pj4il")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(23.8136, 119.407)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(23.7288, 167.458)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(39.322, 183.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(39.661, 167.119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 247.119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 231.186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(87.7966, 183.051)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(87.4576, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(71.5254, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.661, 151.186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.661, 199.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.661, 183.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(87.7966, 167.458)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(167.458, 199.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(239.322, 399.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(167.458, 183.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(151.525, 183.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(183.39, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(167.458, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 247.458)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.322, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 119.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(72.2034, 102.712)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 103.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 119.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(103.39, 119.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(87.7966, 134.915)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 135.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(215.593, 247.119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(215.593, 231.186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(215.593, 215.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(183.39, 183.051)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.661, 55.2542)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(103.729, 55.2542)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(87.4576, 55.5932)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.5932, 55.2542)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(55.9322, 71.1864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(39.661, 71.1864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(151.525, 87.1186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(119.661, 87.1186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(103.39, 87.7966)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(167.458, 119.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 103.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(199.661, 22.7119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 39.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(135.593, 55.2542)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(231.525, 39.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(263.729, 103.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(295.593, 151.186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D72" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.729, 119.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D76" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(375.593, 103.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D80" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(391.186, 87.1186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(439.661, 55.5932)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D87" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(455.932, 71.1864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D89" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(471.525, 55.5932)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D90" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(439.661, 22.7119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D91" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(487.458, 87.7966)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D92" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(503.39, 22.7119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D88" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(439.322, 71.1864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D84" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(391.525, 23.7288)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D85" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(407.797, 103.051)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D93" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(423.729, 135.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D96" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(439.322, 183.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D100" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(455.593, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D105" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(407.458, 215.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D110" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(375.593, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D113" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.729, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D116" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(327.458, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D119" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(295.593, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D121" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(247.458, 214.915)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D124" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(263.39, 247.119)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D122" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(263.729, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D123" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(279.661, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D120" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(311.525, 215.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D117" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.39, 183.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D118" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.39, 199.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D114" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(359.661, 199.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D115" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(375.593, 199.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D111" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(487.797, 231.864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D112" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(487.797, 247.458)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D106" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(407.458, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D107" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(423.39, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D108" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(439.661, 231.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D109" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(455.593, 231.864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D101" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(503.39, 199.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D102" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(487.458, 183.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D103" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(455.593, 199.661)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D104" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(455.593, 183.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D97" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(471.525, 151.864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D98" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(487.458, 135.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D99" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(471.864, 135.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D94" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(407.458, 135.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(423.39, 119.322)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D86" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(407.119, 87.1186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D81" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(391.186, 71.1864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D82" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(359.661, 54.9152)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D77" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(375.932, 135.593)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D78" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(359.661, 134.915)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D79" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.729, 151.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D73" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(311.525, 135.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D74" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(311.864, 151.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D75" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(231.525, 168.136)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(279.661, 151.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(263.39, 151.186)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(247.458, 151.525)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(231.525, 151.864)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(263.39, 135.254)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(343.729, 54.9153)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(295.593, 54.9153)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(279.661, 54.9153)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(311.864, 103.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(295.932, 103.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(279.661, 103.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(247.458, 103.39)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(215.593, 103.729)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(183.729, 87.4576)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="Layer0/StaticBody2D"]
+position = Vector2(215.254, 55.5932)
+shape = SubResource("RectangleShape2D_r13wc")
+
+[node name="Block" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(164, 258)
+scale = Vector2(2, 2)
+
+[node name="Block2" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(401, 211)
+scale = Vector2(2, 2)
+
+[node name="Block8" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(401, 257)
+scale = Vector2(2, 2)
+
+[node name="Block9" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(70, 635)
+scale = Vector2(2, 2)
+
+[node name="Block10" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(117, 635)
+scale = Vector2(2, 2)
+
+[node name="Block11" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(166, 590)
+scale = Vector2(2, 2)
+
+[node name="Block12" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(308, 637)
+scale = Vector2(2, 2)
+
+[node name="Block13" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(260, 730)
+scale = Vector2(2, 2)
+
+[node name="Block14" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(353, 635)
+scale = Vector2(2, 2)
+
+[node name="Block15" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(400, 683)
+scale = Vector2(2, 2)
+
+[node name="Block16" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(259, 445)
+scale = Vector2(2, 2)
+
+[node name="Block17" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(307, 445)
+scale = Vector2(2, 2)
+
+[node name="Block18" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(401, 447)
+scale = Vector2(2, 2)
+
+[node name="Block19" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(448, 494)
+scale = Vector2(2, 2)
+
+[node name="Block20" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(543, 587)
+scale = Vector2(2, 2)
+
+[node name="Block21" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(591, 541)
+scale = Vector2(2, 2)
+
+[node name="Block22" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(448, 353)
+scale = Vector2(2, 2)
+
+[node name="Block23" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(495, 257)
+scale = Vector2(2, 2)
+
+[node name="Block24" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(544, 353)
+scale = Vector2(2, 2)
+
+[node name="Block25" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(588, 305)
+scale = Vector2(2, 2)
+
+[node name="Block34" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(684, 305)
+scale = Vector2(2, 2)
+
+[node name="Block66" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(779, 212)
+scale = Vector2(2, 2)
+
+[node name="Block67" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(731, 212)
+scale = Vector2(2, 2)
+
+[node name="Block68" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(684, 258)
+scale = Vector2(2, 2)
+
+[node name="Block69" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(826, 258)
+scale = Vector2(2, 2)
+
+[node name="Block70" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(497, 448)
+scale = Vector2(2, 2)
+
+[node name="Block71" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(543, 401)
+scale = Vector2(2, 2)
+
+[node name="Block72" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(636, 495)
+scale = Vector2(2, 2)
+
+[node name="Block35" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(778, 682)
+scale = Vector2(2, 2)
+
+[node name="Block36" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(825, 588)
+scale = Vector2(2, 2)
+
+[node name="Block37" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(920, 589)
+scale = Vector2(2, 2)
+
+[node name="Block38" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(920, 731)
+scale = Vector2(2, 2)
+
+[node name="Block39" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(874, 495)
+scale = Vector2(2, 2)
+
+[node name="Block40" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(968, 494)
+scale = Vector2(2, 2)
+
+[node name="Block41" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(968, 353)
+scale = Vector2(2, 2)
+
+[node name="Block59" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1062, 304)
+scale = Vector2(2, 2)
+
+[node name="Block42" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(967, 258)
+scale = Vector2(2, 2)
+
+[node name="Block43" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1015, 116)
+scale = Vector2(2, 2)
+
+[node name="Block44" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1014, 210)
+scale = Vector2(2, 2)
+
+[node name="Block46" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1110, 164)
+scale = Vector2(2, 2)
+
+[node name="Block73" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1154, 164)
+scale = Vector2(2, 2)
+
+[node name="Block74" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1203, 164)
+scale = Vector2(2, 2)
+
+[node name="Block75" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1249, 164)
+scale = Vector2(2, 2)
+
+[node name="Block45" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1297, 115)
+scale = Vector2(2, 2)
+
+[node name="Block47" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1391, 68)
+scale = Vector2(2, 2)
+
+[node name="Block48" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1439, 164)
+scale = Vector2(2, 2)
+
+[node name="Block50" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1391, 260)
+scale = Vector2(2, 2)
+
+[node name="Block51" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1344, 307)
+scale = Vector2(2, 2)
+
+[node name="Block52" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1487, 354)
+scale = Vector2(2, 2)
+
+[node name="Block53" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1298, 447)
+scale = Vector2(2, 2)
+
+[node name="Block60" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1204, 495)
+scale = Vector2(2, 2)
+
+[node name="Block61" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1254, 496)
+scale = Vector2(2, 2)
+
+[node name="Block62" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1488, 212)
+scale = Vector2(2, 2)
+
+[node name="Block63" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1533, 212)
+scale = Vector2(2, 2)
+
+[node name="Block64" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1534, 307)
+scale = Vector2(2, 2)
+
+[node name="Block65" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1392, 352)
+scale = Vector2(2, 2)
+
+[node name="Block54" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1156, 352)
+scale = Vector2(2, 2)
+
+[node name="Block55" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1109, 448)
+scale = Vector2(2, 2)
+
+[node name="Block56" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1250, 730)
+scale = Vector2(2, 2)
+
+[node name="Block58" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1440, 634)
+scale = Vector2(2, 2)
+
+[node name="Block57" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1346, 729)
+scale = Vector2(2, 2)
+
+[node name="Block49" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(1391, 116)
+scale = Vector2(2, 2)
+
+[node name="Block26" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(543, 211)
+scale = Vector2(2, 2)
+
+[node name="Block29" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(496, 118)
+scale = Vector2(2, 2)
+
+[node name="Block30" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(826, 116)
+scale = Vector2(2, 2)
+
+[node name="Block31" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(826, 70)
+scale = Vector2(2, 2)
+
+[node name="Block32" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(684, 399)
+scale = Vector2(2, 2)
+
+[node name="Block33" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(731, 352)
+scale = Vector2(2, 2)
+
+[node name="Block27" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(589, 164)
+scale = Vector2(2, 2)
+
+[node name="Block28" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(542, 164)
+scale = Vector2(2, 2)
+
+[node name="Block3" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(259, 212)
+scale = Vector2(2, 2)
+
+[node name="Block4" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(354, 353)
+scale = Vector2(2, 2)
+
+[node name="Block5" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(260, 352)
+scale = Vector2(2, 2)
+
+[node name="Block6" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(212, 352)
+scale = Vector2(2, 2)
+
+[node name="Block7" parent="." instance=ExtResource("4_3kf8w")]
+position = Vector2(165, 403)
+scale = Vector2(2, 2)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.00184107, 0.00184107, 0.00184107, 1)
+
+[node name="Player1" parent="." instance=ExtResource("1_pnq3n")]
+position = Vector2(87, 86)
+
+[node name="Label_P1" type="Label" parent="Player1"]
+offset_left = -5.25
+offset_top = -16.5
+offset_right = 3.75
+offset_bottom = -5.5
+theme_override_colors/font_color = Color(0, 0.541176, 0.701961, 1)
+theme_override_font_sizes/font_size = 7
+text = "10"
+
+[node name="Player2" parent="." instance=ExtResource("2_ibj5y")]
+position = Vector2(1510, 680)
+
+[node name="Label_P2" type="Label" parent="Player2"]
+offset_left = -5.0
+offset_top = -18.5
+offset_right = 4.0
+offset_bottom = -5.5
+theme_override_colors/font_color = Color(0.87451, 0.486275, 0, 1)
+theme_override_font_sizes/font_size = 7
+text = "10"
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(801.5, 399)
+shape = SubResource("RectangleShape2D_mhpqi")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(802.5, 398.5)
+scale = Vector2(24.9844, 12.5156)
+texture = SubResource("GradientTexture2D_h2n6l")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+modulate = Color(0.450648, 0.450648, 0.450648, 1)
+offset_right = 1607.0
+offset_bottom = 802.0
+
+[node name="Summary" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 715.0
+offset_top = 237.0
+offset_right = 887.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "win"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 847.0
+offset_top = 454.0
+offset_right = 1080.0
+offset_bottom = 517.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_s4g3m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xy5ct")
+text = "Play"
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 519.0
+offset_top = 451.0
+offset_right = 752.0
+offset_bottom = 514.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_pj4il")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h2n6l")
+text = "Exit"
+
+[node name="item_up_light" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(354, 307)
+
+[node name="item_up_light2" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(495, 211)
+
+[node name="item_up_light3" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(495, 731)
+
+[node name="item_up_light4" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(731, 730)
+
+[node name="item_up_light5" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(920, 259)
+
+[node name="item_up_light6" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(1343, 259)
+
+[node name="item_up_light7" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(1204, 70)
+
+[node name="item_up_light8" parent="." instance=ExtResource("10_h2n6l")]
+position = Vector2(683, 354)
+
+[connection signal="pickup_bombs" from="item_up_bombs" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs2" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs3" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs10" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs6" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs7" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs9" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs8" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs4" to="." method="_on_item_up_bombs"]
+[connection signal="pickup_bombs" from="item_up_bombs5" to="." method="_on_item_up_bombs"]
+[connection signal="tricker" from="Player1" to="." method="_on_player_1_tricker"]
+[connection signal="tricker" from="Player2" to="." method="_on_player_2_tricker"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

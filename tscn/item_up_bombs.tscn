@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl5igmmilc26p"]
+
+[ext_resource type="Script" uid="uid://b44smvyactdxh" path="res://Script/item_up_bombs.gd" id="1_h4yh2"]
+[ext_resource type="Texture2D" uid="uid://br6an35haiu7f" path="res://Asset/ะ“ั€ัะฟะฟะฐ 44.png" id="2_h4yh2"]
+[ext_resource type="AudioStream" uid="uid://v32auxs3vd7d" path="res://Sound/เก็บบอม.mp3" id="3_4h8fy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4yh2"]
+size = Vector2(35, 35)
+
+[node name="item_up_bombs" type="Area2D"]
+script = ExtResource("1_h4yh2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_h4yh2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_h4yh2")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4h8fy")
+volume_db = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

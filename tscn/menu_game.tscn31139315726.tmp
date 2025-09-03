@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://y1unuqn7m2y3"]
+
+[ext_resource type="Script" uid="uid://dna52xu22hj" path="res://Script/menu_game.gd" id="1_qykfm"]
+
+[node name="MenuGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qykfm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 117.0
+offset_right = 1068.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 60
+text = "Copy Bomberman"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 416.0
+offset_right = 912.0
+offset_bottom = 487.0
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 667.0
+offset_top = 580.0
+offset_right = 913.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

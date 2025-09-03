@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://y1unuqn7m2y3"]
+
+[ext_resource type="Script" uid="uid://dna52xu22hj" path="res://Script/menu_game.gd" id="1_qykfm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0enfl"]
+bg_color = Color(0, 0.541176, 0.701961, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuxvy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qykfm"]
+bg_color = Color(1.82897e-06, 0.542694, 0.701096, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf7sh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65oxg"]
+bg_color = Color(0.874808, 0.488133, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+shadow_offset = Vector2(0, 3.5)
+
+[node name="MenuGame" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qykfm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 117.0
+offset_right = 1068.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 60
+text = "Copy Bomberman"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 422.0
+offset_right = 965.0
+offset_bottom = 493.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxFlat_0enfl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kuxvy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qykfm")
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 530.0
+offset_right = 968.0
+offset_bottom = 600.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_cf7sh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_65oxg")
+text = "Exit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

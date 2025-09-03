@@ -1,0 +1,119 @@
+[gd_scene load_steps=20 format=3 uid="uid://ca4fyrwpa08t3"]
+
+[ext_resource type="Script" uid="uid://bxxrk6jxot3hw" path="res://Script/bomb.gd" id="1_a16xk"]
+[ext_resource type="Texture2D" uid="uid://0tpamtat830k" path="res://Asset/Screenshot_2025-08-31_234813-removebg-preview-copy2.png" id="1_loaxf"]
+[ext_resource type="Texture2D" uid="uid://8ri076aepmt5" path="res://Asset/Screenshot_2025-08-31_234813-removebg-preview.png" id="2_yxhpd"]
+[ext_resource type="Texture2D" uid="uid://b7hw2ug6wb05w" path="res://Asset/Screenshot_2025-08-31_234813-removebg-preview-copy1.png" id="3_0w7wa"]
+[ext_resource type="Texture2D" uid="uid://k81xx3euosvr" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview1.png" id="4_oru8k"]
+[ext_resource type="Texture2D" uid="uid://dq2cexbn41jlu" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview2.png" id="5_hl3rg"]
+[ext_resource type="Texture2D" uid="uid://qwr1onw4c3ro" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview3.png" id="6_a16xk"]
+[ext_resource type="Texture2D" uid="uid://btarrqmkcfblb" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview4.png" id="7_yvnfb"]
+[ext_resource type="Texture2D" uid="uid://x6xyk7dyv1l6" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview5.png" id="8_30314"]
+[ext_resource type="Texture2D" uid="uid://c67nentd8equh" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview6.png" id="9_f6xf1"]
+[ext_resource type="Texture2D" uid="uid://8uxw2wlu0pkg" path="res://Asset/Screenshot_2025-08-31_234832-removebg-preview7.png" id="10_b4ylc"]
+[ext_resource type="Texture2D" uid="uid://carltf350dnq0" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview1.png" id="11_hl3rg"]
+[ext_resource type="Texture2D" uid="uid://budp8u86hjtfb" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview2.png" id="12_a16xk"]
+[ext_resource type="Texture2D" uid="uid://2ty3aa63alb0" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview3.png" id="13_yvnfb"]
+[ext_resource type="Texture2D" uid="uid://d3j8pcbo3tfow" path="res://Asset/animation-explosion-effect-cartoon-comic-style-cartoon-explosion-effect-with-smoke-game_93083-293_1_-removebg-preview4.png" id="14_30314"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eovry"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_oru8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hl3rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a16xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yvnfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_30314")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f6xf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_b4ylc")
+}],
+"loop": true,
+"name": &"Fire",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qd5jr"]
+radius = 84.214
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_loaxf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yxhpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_loaxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yxhpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0w7wa")
+}],
+"loop": true,
+"name": &"bomb",
+"speed": 9.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yxhpd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_hl3rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a16xk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yvnfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_30314")
+}],
+"loop": true,
+"name": &"Fire",
+"speed": 7.0
+}]
+
+[node name="Bomb" type="Area2D"]
+script = ExtResource("1_a16xk")
+
+[node name="fire" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_eovry")
+animation = &"Fire"
+frame = 2
+frame_progress = 0.834205
+
+[node name="CollisionShape2DFire" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qd5jr")
+
+[node name="bomb" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_loaxf")
+animation = &"bomb"
+
+[node name="fire2" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_yxhpd")
+animation = &"Fire"
+frame = 2
+frame_progress = 0.0204643
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+volume_db = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
