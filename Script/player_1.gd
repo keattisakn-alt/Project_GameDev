@@ -7,14 +7,14 @@ var screen_size = Vector2.ZERO
 var number_bombs = 10
 var scale_fire = 1.0
 var radius = 75
-var texture_scale = 1
+var texture_scale = 1 
 signal tricker
 
 
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	action = true 
+	action = true  
 
 func _process(delta: float) -> void:
 	var direction = Vector2.ZERO
