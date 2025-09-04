@@ -155,28 +155,31 @@ text = "Map4"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 262.0
+offset_left = 280.0
 offset_top = 672.0
-offset_right = 517.0
+offset_right = 535.0
 offset_bottom = 700.0
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1095.0
-offset_top = 661.0
-offset_right = 1350.0
-offset_bottom = 689.0
+offset_left = 1110.0
+offset_top = 665.0
+offset_right = 1365.0
+offset_bottom = 693.0
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1086.0
-offset_top = 270.0
-offset_right = 1341.0
-offset_bottom = 298.0
+offset_left = 1103.0
+offset_top = 269.0
+offset_right = 1358.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
 text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
 
