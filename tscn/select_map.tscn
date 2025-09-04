@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://oo0cof21463"]
+[gd_scene load_steps=13 format=3 uid="uid://oo0cof21463"]
 
 [ext_resource type="Script" uid="uid://be6h2er4yidch" path="res://Script/select_map.gd" id="1_18fi8"]
 [ext_resource type="Texture2D" uid="uid://c5ka8ugx6gw3u" path="res://Asset/Screenshot 2025-09-03 042734.png" id="2_w1ovw"]
 [ext_resource type="FontFile" uid="uid://c1uyl0pcschsw" path="res://Minecraft.ttf" id="3_2rn3w"]
 [ext_resource type="AudioStream" uid="uid://c7jfsiqctpoth" path="res://Sound/ssvid.net--A-Lonely-Cherry-Tree.mp3" id="3_vxru2"]
-[ext_resource type="FontFile" uid="uid://clt8twpertv3t" path="res://ChakraPetch-Light.ttf" id="4_eidv0"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jgo4c"]
 
@@ -156,33 +155,33 @@ text = "Map4"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 280.0
+offset_left = 246.0
 offset_top = 672.0
-offset_right = 535.0
+offset_right = 529.0
 offset_bottom = 700.0
-theme_override_fonts/font = ExtResource("4_eidv0")
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
-text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
+text = "coming soon ( Wait Patch1.2 )"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1110.0
+offset_left = 1080.0
 offset_top = 665.0
-offset_right = 1365.0
+offset_right = 1363.0
 offset_bottom = 693.0
-theme_override_fonts/font = ExtResource("4_eidv0")
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
-text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
+text = "coming soon ( Wait Patch1.2 )"
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1103.0
+offset_left = 1073.0
 offset_top = 269.0
-offset_right = 1358.0
+offset_right = 1356.0
 offset_bottom = 297.0
-theme_override_fonts/font = ExtResource("4_eidv0")
+theme_override_fonts/font = ExtResource("3_2rn3w")
 theme_override_font_sizes/font_size = 20
-text = "แมพนี้จะอัปเดตเข้าแพทช์หน้า"
+text = "coming soon ( Wait Patch1.2 )"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_vxru2")
